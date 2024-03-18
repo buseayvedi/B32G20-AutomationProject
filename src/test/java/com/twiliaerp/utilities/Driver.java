@@ -10,6 +10,8 @@ import java.time.Duration;
 
 public class Driver {
 
+    private Driver(){}
+
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     public static WebDriver getDriver() {

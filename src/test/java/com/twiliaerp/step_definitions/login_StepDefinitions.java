@@ -1,6 +1,7 @@
 package com.twiliaerp.step_definitions;
 
 import com.twiliaerp.page.BasePage_US01_Buse;
+import com.twiliaerp.page.LoginPage_US01;
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,11 +11,12 @@ import org.openqa.selenium.Keys;
 
 
 public class login_StepDefinitions {
-    BasePage_US01_Buse page = new BasePage_US01_Buse();
+
+    LoginPage_US01 page = new LoginPage_US01();
 
     @Given("User is on the login page of the application")
     public void user_is_on_the_login_page_of_the_application() {
-        Driver.getDriver().get("https://qa.twiliaerp.com/web/login");
+        Driver.getDriver().get("https://qa.twiliaerp.com/");
     }
 
     @When("user enters valid \\{username} and \\{password}")

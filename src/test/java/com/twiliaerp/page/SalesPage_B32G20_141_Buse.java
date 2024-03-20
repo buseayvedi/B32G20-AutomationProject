@@ -16,6 +16,12 @@ public class SalesPage_B32G20_141_Buse extends BasePage_US01_Buse {
     @FindBy(css = "input.o_searchview_input")
     public WebElement searchBox;
 
+    @FindBy(css = "a[href='/web#menu_id=471&action=623']")
+    public WebElement quotationsBtn;
+
+    @FindBy(xpath = "//th[text()='Quotation Number']")
+    public WebElement quotationNumberTitle;
+
     @FindBy(css = "th.o_column_sortable")
     public List<WebElement> listTitles_QuotationsPage;
 

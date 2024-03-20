@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 
-public class Automationexercise_StepDefinitions {
+public class login_StepDefinitions {
     BasePage_US01_Buse page = new BasePage_US01_Buse();
 
     @Given("User is on the login page of the application")

@@ -13,7 +13,7 @@ public class Automationexercise_StepDefinitions {
 
     @Given("User is on the login page of the application")
     public void user_is_on_the_login_page_of_the_application() {
-        Driver.getDriver().get("https://www.automationexercise.com/login");
+        Driver.getDriver().get("https://qa.twiliaerp.com/web/login");
     }
 
     @When("user enters valid \\{username} and \\{password}")
@@ -24,7 +24,7 @@ public class Automationexercise_StepDefinitions {
 
     @Then("user should see the dashboard")
     public void user_should_see_the_dashboard() {
-        Assert.assertTrue(Driver.getDriver().getTitle().contains("Exercise"));
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("Odoo"));
     }
 
 }

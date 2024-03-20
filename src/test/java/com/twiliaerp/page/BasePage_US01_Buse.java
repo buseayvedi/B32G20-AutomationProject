@@ -46,10 +46,10 @@ public class BasePage_US01_Buse {
     @FindBy(xpath = "(//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']//li)[6]")
     public WebElement salesBtn;
 
-    @FindBy(xpath = "//input[@data-qa='login-email']")
+    @FindBy(id = "login")
     public WebElement usernameInputBox;
 
-    @FindBy(xpath = "//input[@data-qa='login-password']")
+    @FindBy(id = "password")
     public WebElement passwordInputBox;
 
 

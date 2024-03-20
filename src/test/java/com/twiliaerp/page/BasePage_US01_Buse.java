@@ -46,7 +46,7 @@ public abstract class BasePage_US01_Buse {
     @FindBy(xpath = "")
     public WebElement crmBtn;
 
-    @FindBy(xpath = "a[href='/web#menu_id=115&action=120']")
+    @FindBy(css = "a[href='/web#menu_id=445&action=']")
     public WebElement salesBtn;
 
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){

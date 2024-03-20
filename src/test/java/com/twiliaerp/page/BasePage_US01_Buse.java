@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public abstract class BasePage_US01_Buse {
+public class BasePage_US01_Buse {
 
     public BasePage_US01_Buse(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -45,6 +45,12 @@ public abstract class BasePage_US01_Buse {
 
     @FindBy(xpath = "(//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']//li)[6]")
     public WebElement salesBtn;
+
+    @FindBy(xpath = "//input[@data-qa='login-email']")
+    public WebElement usernameInputBox;
+
+    @FindBy(xpath = "//input[@data-qa='login-password']")
+    public WebElement passwordInputBox;
 
 
 

@@ -40,7 +40,7 @@ public abstract class BasePage_US01_Buse {
     @FindBy(xpath = "")
     public WebElement notesBtn;
 
-    @FindBy(xpath = "(")
+    @FindBy(xpath = "")
     public WebElement contactsBtn;
 
     @FindBy(xpath = "")
@@ -48,6 +48,9 @@ public abstract class BasePage_US01_Buse {
 
     @FindBy(css = "a[href='/web#menu_id=445&action=']")
     public WebElement salesBtn;
+
+    @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
+    public WebElement repairsBtn;
 
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){
         ExcelUtil excelUtil = new ExcelUtil("src/testData/loginCredentials.xlsx",sheetName);

@@ -1,10 +1,11 @@
-@login
-Feature: As a user, I should be able to login
+@B32G20-170
+Feature: Default
 
   Background: User is on the login page of the application
     Given user is on the login page
 
-  Scenario Outline: verify login with valid credentials
+  @B32G20-166 @Login
+  Scenario Outline: US01_Verify that the user can log in with valid credentials
     When user enters valid "<username>"
     And user enters valid "<password>" and click enter
     Then user should see the dashboard
@@ -17,12 +18,26 @@ Feature: As a user, I should be able to login
       | expensesmanager77@info.com  | expensesmanager  |
 
 
-  Scenario Outline: verify user fails to log in with invalid credentials
-    Given user is on the login page
-    When user enters invalid "<username>" and "<password>"
+  @B32G20-167 @InvalidCredentials
+  Scenario Outline: US01_Verify that the user cannot log in with invalid username credentials
+    When user enters invalid "<username>" and valid "<password>"
     Then verify "<message>" message displayed
     Examples:
-      | username              | password      | message              |
-      | posmanager12@info.com | wrongPassword | Wrong login/password |
-      | wrongUsername         | salesmanager  | Wrong login/password |
+      | username                    | password         | message              |
+      | posmanager12@info.com       | inventorymanager | Wrong login/password |
+      | eventscrmmanager11@info.com | salesmanager     | Wrong login/password |
 
+
+  @B32G20-168 @InvalidCredentials
+  Scenario Outline: US01_Verify that the user cannot log in with invalid password credentials
+    When user enters valid "<username>" and invalid "<password>"
+    Then verify "<message>" message displayed
+    Examples:
+      | username                   | password         | message              |
+      | posmanager12@info.com      | inventorymanager | Wrong login/password |
+      | expensesmanager77@info.com | salesmanager     | Wrong login/password |
+
+
+  @B32G20-169 @BlankFieldVerification
+  Scenario: US01_Verify user gets "Please fill out this filed" message for blank fields
+    When user gets “Please fill out this field” for blank fields

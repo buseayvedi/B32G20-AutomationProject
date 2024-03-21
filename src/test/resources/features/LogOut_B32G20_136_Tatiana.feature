@@ -1,3 +1,4 @@
+@logout
 Feature: Log out functionality
   US:
   As a user, I should be able to log out.
@@ -10,7 +11,7 @@ Feature: Log out functionality
     Given user login successfully with valid credentials "<sheetName>", <rowNum>
     When user click account name tab
     And user click log out button
-    When user should lands on log in page again
+    Then user should lands on log in page again
     Examples:
       | sheetName    | rowNum |
       | posmanager   | 5      |

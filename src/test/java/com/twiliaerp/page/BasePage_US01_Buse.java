@@ -55,15 +55,17 @@ public abstract class BasePage_US01_Buse {
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){
         ExcelUtil excelUtil = new ExcelUtil("src/testData/loginCredentials.xlsx",sheetName);
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("login.page.url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         Driver.getDriver().findElement(By.id("login")).sendKeys(excelUtil.getCellData(rowNum,1));
         Driver.getDriver().findElement(By.id("password")).sendKeys(excelUtil.getCellData(rowNum,2));
         Driver.getDriver().findElement(By.cssSelector("button[type='submit']")).click();
 
-
     }
 
 
+    public void clickAccountName(){
+        accountName.click();
+    }
 
 
 

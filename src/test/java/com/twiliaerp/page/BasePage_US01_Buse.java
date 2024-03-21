@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class BasePage_US01_Buse {
+public abstract class BasePage_US01_Buse {
 
     public BasePage_US01_Buse(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -40,7 +40,7 @@ public class BasePage_US01_Buse {
     @FindBy(xpath = "")
     public WebElement notesBtn;
 
-    @FindBy(xpath = "(")
+    @FindBy(xpath = "")
     public WebElement contactsBtn;
 
     @FindBy(xpath = "")
@@ -49,11 +49,8 @@ public class BasePage_US01_Buse {
     @FindBy(css = "a[href='/web#menu_id=445&action=']")
     public WebElement salesBtn;
 
-    @FindBy(id = "login")
-    public WebElement usernameInputBox;
-
-    @FindBy(id = "password")
-    public WebElement passwordInputBox;
+    @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
+    public WebElement repairsBtn;
 
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){
         ExcelUtil excelUtil = new ExcelUtil("src/testData/loginCredentials.xlsx",sheetName);

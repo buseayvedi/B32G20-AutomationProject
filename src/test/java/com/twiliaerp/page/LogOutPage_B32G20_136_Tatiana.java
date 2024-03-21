@@ -19,4 +19,5 @@ public class LogOutPage_B32G20_136_Tatiana extends BasePage_US01_Buse{
         logOutButtn.click();
     }
 
+
 }

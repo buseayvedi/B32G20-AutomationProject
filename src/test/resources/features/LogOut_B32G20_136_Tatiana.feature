@@ -17,3 +17,19 @@ Feature: Log out functionality
       | posmanager   | 5      |
       | posmanager   | 55     |
 
+  Scenario Outline: AC2:Verify that the user can see 5 options under the profile name.
+  (Documentation, Support, Preferences, My Odoo.com account, Log out)
+    Given user login successfully with valid credentials "<sheetName>", <rowNum>
+    When user click account name tab
+    And user should see these options under the profile menu
+    |Documentation|
+    |Support      |
+    |Preferences  |
+    |My Odoo.com account|
+    |Log out            |
+
+    Examples:
+      | sheetName    | rowNum |
+      | posmanager   | 5      |
+      | posmanager   | 55     |
+

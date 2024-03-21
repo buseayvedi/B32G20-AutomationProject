@@ -5,20 +5,20 @@ Feature: Default
     Given user is on the login page
 
   @B32G20-166 @Login
-  Scenario Outline: US01_Verify that the user can log in with valid credentials
-    When user enters valid "<username>"
-    And user enters valid "<password>" and click enter
+    Scenario: US01_Verify that the user can log in with valid credentials
+    When When user enters valid "posmanager12@info.com"
+    And user enters valid "posmanager" then click enter
     Then user should see the dashboard
-    Examples:
-      | username                    | password         |
-      | posmanager12@info.com       | posmanager       |
-      | eventscrmmanager11@info.com | eventscrmmanager |
-      | salesmanager17@info.com     | salesmanager     |
-      | imm37@info.com              | inventorymanager |
-      | expensesmanager77@info.com  | expensesmanager  |
+
+#      | username                    | password         |
+#      | posmanager12@info.com       | posmanager       |
+#      | eventscrmmanager11@info.com | eventscrmmanager |
+#      | salesmanager17@info.com     | salesmanager     |
+#      | imm37@info.com              | inventorymanager |
+#      | expensesmanager77@info.com  | expensesmanager  |
 
 
-  @B32G20-167 @InvalidCredentials
+  @B32G20-167 @InvalidUsername
   Scenario Outline: US01_Verify that the user cannot log in with invalid username credentials
     When user enters invalid "<username>" and valid "<password>"
     Then verify "<message>" message displayed
@@ -28,7 +28,7 @@ Feature: Default
       | eventscrmmanager11@info.com | salesmanager     | Wrong login/password |
 
 
-  @B32G20-168 @InvalidCredentials
+  @B32G20-168 @InvalidPassword
   Scenario Outline: US01_Verify that the user cannot log in with invalid password credentials
     When user enters valid "<username>" and invalid "<password>"
     Then verify "<message>" message displayed

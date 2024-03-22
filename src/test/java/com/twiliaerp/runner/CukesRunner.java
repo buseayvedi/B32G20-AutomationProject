@@ -30,7 +30,6 @@ import org.junit.runner.RunWith;
 
         // Specifies the tags to include/exclude specific scenarios or features
         tags = "",
-
         // Whether to execute a dry run of the feature files
         dryRun = false,
 
@@ -40,7 +39,6 @@ import org.junit.runner.RunWith;
 
         // Whether to publish the results
         publish = true
-
 
 
 )

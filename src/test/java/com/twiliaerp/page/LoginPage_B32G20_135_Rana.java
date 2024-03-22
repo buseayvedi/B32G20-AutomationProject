@@ -1,15 +1,13 @@
 package com.twiliaerp.page;
 
-import com.twiliaerp.utilities.ConfigurationReader;
 import com.twiliaerp.utilities.Driver;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage_US01 {
+public class LoginPage_B32G20_135_Rana {
 
-    public LoginPage_US01(){
+    public LoginPage_B32G20_135_Rana(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

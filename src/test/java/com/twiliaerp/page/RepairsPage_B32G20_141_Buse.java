@@ -1,10 +1,13 @@
 package com.twiliaerp.page;
 
+import com.twiliaerp.utilities.BrowserUtilities;
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.bs.A;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +44,17 @@ public class RepairsPage_B32G20_141_Buse extends BasePage_US01_Buse{
             list.add(each.getText());
         }
         return list;
+    }
+
+    public void sendKeysSearchBox(String str){
+        searchBox.sendKeys(str + Keys.ENTER);
+        wait.until(ExpectedConditions.invisibilityOf(loadingInfo));
+        BrowserUtilities.sleep(5);
+    }
+
+    public void repairModuleClick(){
+        repairsBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(repairReferenceBtn));
     }
 
 }

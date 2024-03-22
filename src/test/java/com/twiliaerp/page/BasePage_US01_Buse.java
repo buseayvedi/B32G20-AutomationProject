@@ -4,10 +4,14 @@ import com.twiliaerp.utilities.ConfigurationReader;
 import com.twiliaerp.utilities.Driver;
 import com.twiliaerp.utilities.ExcelUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +23,9 @@ public abstract class BasePage_US01_Buse {
 
     @FindBy(css = "div.navbar-collapse.collapse>ul>li")
     public List<WebElement> allHeaderPages;
+
+    @FindBy(xpath = "//*[text()='Loading']")
+    public WebElement loadingInfo;
 
     @FindBy(css = "ul#menu_more>li")
     public List<WebElement> moreHeaderPages;
@@ -65,6 +72,8 @@ public abstract class BasePage_US01_Buse {
         return actualList;
     }
 
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
+
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){
         ExcelUtil excelUtil = new ExcelUtil("src/testData/loginCredentials.xlsx",sheetName);
 
@@ -72,6 +81,14 @@ public abstract class BasePage_US01_Buse {
         Driver.getDriver().findElement(By.id("login")).sendKeys(excelUtil.getCellData(rowNum,1));
         Driver.getDriver().findElement(By.id("password")).sendKeys(excelUtil.getCellData(rowNum,2));
         Driver.getDriver().findElement(By.cssSelector("button[type='submit']")).click();
+
+        wait.until(ExpectedConditions.visibilityOf(salesBtn));
+
+    }
+
+    public void clickSalesModule(){
+        salesBtn.click();
+        wait.until(ExpectedConditions.invisibilityOf(loadingInfo));
 
     }
 

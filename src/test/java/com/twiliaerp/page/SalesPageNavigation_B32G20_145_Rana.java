@@ -5,13 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SalesPage_B32G20_145 {
+public class SalesPageNavigation_B32G20_145_Rana {
 
-    public SalesPage_B32G20_145(){
+    public SalesPageNavigation_B32G20_145_Rana(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "(//a/span[contains(.,'Sales')])[1]")
     public WebElement SalesMenuOption;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[3]")
+    public WebElement selectAllCheckBox;
 
 
 

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BasePage_US01_Buse {
@@ -52,17 +53,32 @@ public abstract class BasePage_US01_Buse {
     @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
     public WebElement repairsBtn;
 
+    @FindBy(xpath = "//li[@class='o_user_menu open']//li//a")
+    public List<WebElement> listOfAccountOptions;
+
+    public List<String> textOfAccountOptions() {
+        List<String> actualList = new ArrayList<>();
+        for (WebElement each : listOfAccountOptions) {
+            actualList.add(each.getText());
+
+        }
+        return actualList;
+    }
+
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){
         ExcelUtil excelUtil = new ExcelUtil("src/testData/loginCredentials.xlsx",sheetName);
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("login.page.url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         Driver.getDriver().findElement(By.id("login")).sendKeys(excelUtil.getCellData(rowNum,1));
         Driver.getDriver().findElement(By.id("password")).sendKeys(excelUtil.getCellData(rowNum,2));
         Driver.getDriver().findElement(By.cssSelector("button[type='submit']")).click();
 
-
     }
 
+
+    public void clickAccountName(){
+        accountName.click();
+    }
 
 
 

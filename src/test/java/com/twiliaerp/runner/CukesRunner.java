@@ -18,7 +18,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
 
                 // Enables Pretty reporting
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                "json:target/cucumber.json"
         },
         //Specifies the location of feature files
         features = "src/test/resources/features",
@@ -31,7 +32,7 @@ import org.junit.runner.RunWith;
         tags = "",
 
         // Whether to execute a dry run of the feature files
-        dryRun = true,
+        dryRun = false,
 
 
         // Changes the texts color in terminal

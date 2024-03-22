@@ -2,10 +2,10 @@
 Feature: Default
 
   Background: User is on the login page of the application
-    Given user is on the login page
+    Given user is on the "https://qa.twiliaerp.com/web/login" page
 
   @B32G20-166 @Login
-    Scenario: US01_Verify that the user can log in with valid credentials
+  Scenario: US01_Verify that the user can log in with valid credentials
     When When user enters valid "posmanager12@info.com"
     And user enters valid "posmanager" then click enter
     Then user should see the dashboard

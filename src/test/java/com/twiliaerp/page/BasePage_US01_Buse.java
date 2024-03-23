@@ -63,6 +63,10 @@ public abstract class BasePage_US01_Buse {
     @FindBy(xpath = "//li[@class='o_user_menu open']//li//a")
     public List<WebElement> listOfAccountOptions;
 
+
+    @FindBy(xpath = "//a[@href='/web#menu_id=347&action=']")
+    public WebElement inventoryHeaderLink;
+
     public List<String> textOfAccountOptions() {
         List<String> actualList = new ArrayList<>();
         for (WebElement each : listOfAccountOptions) {

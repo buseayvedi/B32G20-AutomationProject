@@ -29,9 +29,9 @@ import org.junit.runner.RunWith;
 
 
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "@addProduct",
+        tags = "",
         // Whether to execute a dry run of the feature files
-        dryRun = true,
+        dryRun = false,
 
 
         // Changes the texts color in terminal

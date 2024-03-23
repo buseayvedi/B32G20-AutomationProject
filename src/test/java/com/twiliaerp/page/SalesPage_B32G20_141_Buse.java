@@ -4,6 +4,7 @@ import com.twiliaerp.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -30,6 +31,12 @@ public class SalesPage_B32G20_141_Buse extends BasePage_US01_Buse {
 
     public void clickSearchBox(){
         searchBox.click();
+    }
+
+    public void clickSalesModule(){
+        salesBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(quotationNumberTitle));
+
     }
 
 

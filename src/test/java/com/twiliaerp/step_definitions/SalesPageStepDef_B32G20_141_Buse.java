@@ -31,8 +31,7 @@ public class SalesPageStepDef_B32G20_141_Buse {
     @When("user clicks Sales title and land on the page successfully")
     public void user_clicks_sales_title_and_land_on_the_page_successfully() {
         wait.until(ExpectedConditions.visibilityOf(salesPage.salesBtn));
-        salesPage.salesBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(salesPage.quotationNumberTitle));
+        salesPage.clickSalesModule();
     }
 
 

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DiscussPage {
 
     public DiscussPage(){
@@ -15,8 +17,8 @@ public class DiscussPage {
 
     public WebElement calendar_Btn;
 
-
-
+@FindBy(xpath = "(//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder'])/li")
+public List<WebElement> mainModules;
 
 
 

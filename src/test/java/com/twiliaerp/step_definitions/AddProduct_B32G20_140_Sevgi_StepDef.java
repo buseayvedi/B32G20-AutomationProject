@@ -19,6 +19,7 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     public void user_clicks_products_button_on_the_left_side() {
         inventoryPage.productsLink.click();
     }
+
     @And("user clicks Create button on top")
     public void user_clicks_create_button_on_top() {
         inventoryPage.createButton.click();

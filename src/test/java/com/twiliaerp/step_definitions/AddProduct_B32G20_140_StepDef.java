@@ -1,19 +1,9 @@
 package com.twiliaerp.step_definitions;
 
-import com.twiliaerp.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class AddNewProductToInventory_B32G20_140 {
-
-AddNewProductToInventory_B32G20_140 addNewProductToInventory_B32G20_140 =new AddNewProductToInventory_B32G20_140();
-
-WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
+public class AddProduct_B32G20_140_StepDef {
 
 
     @When("user clicks inventory button")
@@ -36,16 +26,25 @@ WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @Then("user click on the product POCO_{int}")
-    public void user_click_on_the_product_poco(Integer int1) {
+    @Then("user click on the product {string}")
+    public void user_click_on_the_product(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @Then("I click on {string} button")
-    public void i_click_on_button(String string) {
+    @Then("I click on Edit button")
+    public void i_click_on_edit_button() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+    @Then("I click on Save button")
+    public void i_click_on_save_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+
+
+
 
 
 

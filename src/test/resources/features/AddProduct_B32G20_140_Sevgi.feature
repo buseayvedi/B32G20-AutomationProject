@@ -15,10 +15,13 @@ Feature: Default
       When user clicks inventory button
       And user clicks Products button on the left side
       And user clicks Create button on top
-      Then user types "POCO_2" on the search box
+      Then user types "POCO_2" on the product name bar
+      And user clicks Save button
+      Then user click on Products button again
+      When user types "POCO_2" on the search box
       And user click on the product "POCO_2"
-      Then I click on Edit button
-      And I click on Save button
+      Then user click on Edit button
+      And user click on Save button
 
 
 #POS_username=posmanager6@info.com

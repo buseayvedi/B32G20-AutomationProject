@@ -1,9 +1,14 @@
 package com.twiliaerp.step_definitions;
 
 import com.twiliaerp.page.InventoryPage_B32G20_140;
+import com.twiliaerp.utilities.BrowserUtilities;
+import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AddProduct_B32G20_140_Sevgi_StepDef {
 
@@ -11,16 +16,16 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
 
 
 
-    @When("user clicks inventory button")
-    public void user_clicks_inventory_button() {
+    @When("user clicks inventory link")
+    public void user_clicks_inventory_link() {
         inventoryPage.inventoryLink.click();
     }
-    @And("user clicks Products button on the left side")
-    public void user_clicks_products_button_on_the_left_side() {
+    @And("user clicks Products link")
+    public void user_clicks_products_link() {
         inventoryPage.productsLink.click();
     }
 
-    @And("user clicks Create button on top")
+    @And("user clicks Create button")
     public void user_clicks_create_button_on_top() {
         inventoryPage.createButton.click();
     }
@@ -33,8 +38,8 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     public void userClicksSaveButton() {
         inventoryPage.saveButton.click();
     }
-    @Then("user click on Products button again")
-    public void userClickOnProductsButtonAgain() {
+    @Then("user click on Products link")
+    public void userClickOnProductslink() {
         inventoryPage.productsLink.click();
     }
     @When("user types {string} on the search box")

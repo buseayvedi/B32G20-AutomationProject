@@ -20,9 +20,9 @@ public class InventoryPage_B32G20_140 {
     @FindBy(xpath = "//button[@accessKey='c']")
     public WebElement createButton;
 
-    @FindBy(xpath = "/input[@placeholder='Product Name']")
-    public WebElement nameBar;
 
+    @FindBy(xpath = "(//input[contains(@id,'o_field_input')])[2]")
+    public WebElement nameBar;
 
     @FindBy(xpath = "//button[text()[normalize-space()='Save']]")
     public WebElement saveButton;
@@ -33,12 +33,11 @@ public class InventoryPage_B32G20_140 {
     @FindBy(xpath = "//span[@name='name']")
     public WebElement productName;
 
-    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    @FindBy(xpath = "//span[contains(text(),'test')]")
+    public WebElement testProduct;
+
+    @FindBy (xpath = "//input[@class='o_searchview_input']")
     public WebElement searchBox;
-
-   @FindBy(xpath = "//div[@class='oe_kanban_global_click o_kanban_record']")
-   public WebElement testProduct;
-
 
 }
 

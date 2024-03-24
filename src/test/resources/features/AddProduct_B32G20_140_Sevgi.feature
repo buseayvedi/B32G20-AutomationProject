@@ -12,12 +12,12 @@ Feature: Default
       Given Given user is on "https://qa.twiliaerp.com/web/login" page
       When user enters valid "posmanager6@info.com"
       And user enters valid "posmanager" and click enter
-      When user clicks inventory button
-      And user clicks Products button on the left side
-      And user clicks Create button on top
+      When user clicks inventory link
+      And user clicks Products link
+      And user clicks Create button
       Then user types "POCO_2" on the product name bar
       And user clicks Save button
-      Then user click on Products button again
+      Then user click on Products link
       When user types "POCO_2" on the search box
       And user click on the product "POCO_2"
       Then user click on Edit button

@@ -6,6 +6,7 @@ import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -44,7 +45,7 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     }
     @When("user types {string} on the search box")
     public void userTypesOnTheSearchBox(String string) {
-        inventoryPage.searchBox.sendKeys(string);
+        inventoryPage.searchBox.sendKeys(string + Keys.ENTER);
     }
     @Then("user click on the product {string}")
     public void user_click_on_the_product(String string) {

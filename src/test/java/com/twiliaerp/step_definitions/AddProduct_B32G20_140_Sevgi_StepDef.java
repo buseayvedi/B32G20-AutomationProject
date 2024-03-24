@@ -23,7 +23,8 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     }
     @And("user clicks Products link")
     public void user_clicks_products_link() {
-        inventoryPage.productsLink.click();
+        BrowserUtilities.hover(inventoryPage.productsLink);
+
     }
 
     @And("user clicks Create button")

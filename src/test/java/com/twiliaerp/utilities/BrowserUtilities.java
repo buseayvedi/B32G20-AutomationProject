@@ -1,6 +1,8 @@
 package com.twiliaerp.utilities;
 
 import org.junit.experimental.theories.Theories;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,6 +29,11 @@ public class BrowserUtilities {
 
         //use the 'wait' object with the proper syntax to create explicit wait conditions.
         wait.until(ExpectedConditions.titleContains(title));
+    }
+
+    public static void hover (WebElement element){
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).perform();
     }
 
 

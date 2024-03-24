@@ -25,14 +25,13 @@ public class SalesPageStepDef_B32G20_141_Buse {
     @Given("user login successfully with valid credentials {string}, {int}")
     public void user_login_successfully_with_valid_credentials(String sheetName, int rowNum) {
         salesPage.loginWithExcelFileCredentials(sheetName,rowNum);
+        wait.until(ExpectedConditions.visibilityOf(salesPage.salesBtn));
 
     }
 
     @When("user clicks Sales title and land on the page successfully")
     public void user_clicks_sales_title_and_land_on_the_page_successfully() {
-        wait.until(ExpectedConditions.visibilityOf(salesPage.salesBtn));
-        salesPage.salesBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(salesPage.quotationNumberTitle));
+        salesPage.clickSalesModule();
     }
 
 
@@ -50,8 +49,10 @@ public class SalesPageStepDef_B32G20_141_Buse {
 
 
     @When("user enters {string} in the search box and hit the enter key")
-    public void user_enters_in_the_search_box_and_hit_the_enter_key(String string) {
+    public void user_enters_in_the_search_box_and_hit_the_enter_key(String string) throws InterruptedException {
         salesPage.searchBox.sendKeys(string + Keys.ENTER);
+        Thread.sleep(4000);
+
     }
 
     @Then("user should see the result on the list : {string},{string},{string},{string},{string},{string}")

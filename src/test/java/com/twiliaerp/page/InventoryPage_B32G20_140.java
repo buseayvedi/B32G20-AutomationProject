@@ -11,7 +11,7 @@ public class InventoryPage_B32G20_140 {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(xpath ="//span[text()[normalize-space()='Products']]" )
+    @FindBy(xpath ="//a[@href='/web#menu_id=378&action=521']" )
     public WebElement productsLink;
 
     @FindBy(xpath ="//span[text()[normalize-space()='Inventory']]" )

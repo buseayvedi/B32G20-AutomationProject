@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class InventoryPage_B32G20_140 {
+public class InventoryPage_B32G20_140_Sevgi {
 
-    public InventoryPage_B32G20_140() {
+    public InventoryPage_B32G20_140_Sevgi() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }

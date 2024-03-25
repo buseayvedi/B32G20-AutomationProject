@@ -35,7 +35,7 @@ import org.junit.runner.RunWith;
 
 
         // Changes the texts color in terminal
-        monochrome = true,
+        monochrome = false,
 
         // Whether to publish the results
         publish = true

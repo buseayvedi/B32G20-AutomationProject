@@ -21,22 +21,7 @@ public class BasePage_US04_manal {
     @FindBy(xpath="//button[.='Log in']")
     public WebElement login_Btn;
 
-    @FindBy(xpath="li[@sty/lle='display: block;']/a[@data-action-id='136']/span")
 
-    public WebElement calendar_Btn;
-
-@FindBy(css="a[class='fc-time-grid-event fc-v-event fc-event fc-start fc-end fc-draggable fc-resizable o_calendar_color_6 fc-short']")
-public WebElement timeBox;
-
-@FindBy(xpath="input[@name='name']")
-public WebElement event_input;
-
-@FindBy(css="button[class='btn btn-sm btn-primary']")
-public WebElement create_Btn;
-    @FindBy(css="a[class='fc-time-grid-event fc-v-event fc-event fc-start fc-end fc-draggable fc-resizable o_calendar_color_6 fc-short']")
-    public WebElement created_event;
-@FindBy(css="div[class='o_group']")
-public WebElement event_details;
 
 
     public void login(String username, String password){

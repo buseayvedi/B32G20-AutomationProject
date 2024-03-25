@@ -18,8 +18,6 @@ Feature: Default
       Then user types "POCO_2" on the product name bar
       And user clicks Save button
       Then user click on Products link
-      When user types "POCO_2" on the search box
-      And user click on the product "POCO_2"
       Then user click on Edit button
       And user click on Save button
 

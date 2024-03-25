@@ -24,12 +24,15 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     @And("user clicks Products link")
     public void user_clicks_products_link() {
         BrowserUtilities.hover(inventoryPage.productsLink);
+        inventoryPage.productsLink.click();
 
     }
 
     @And("user clicks Create button")
     public void user_clicks_create_button_on_top() {
+        BrowserUtilities.hover(inventoryPage.createButton);
         inventoryPage.createButton.click();
+
     }
     @Then("user types {string} on the product name bar")
     public void userTypesOnTheProductNameBar(String string) {
@@ -41,18 +44,11 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
         inventoryPage.saveButton.click();
     }
     @Then("user click on Products link")
-    public void userClickOnProductslink() {
+    public void userClickOnProductsLink() {
         inventoryPage.productsLink.click();
     }
-    @When("user types {string} on the search box")
-    public void userTypesOnTheSearchBox(String string) {
-        BrowserUtilities.hover(inventoryPage.searchBox);
-        inventoryPage.searchBox.sendKeys(string);
-    }
-    @Then("user click on the product {string}")
-    public void user_click_on_the_product(String string) {
-        inventoryPage.testProduct.click();
-    }
+
+
     @Then("user click on Edit button")
     public void user_click_on_edit_button() {
         inventoryPage.editButton.click();

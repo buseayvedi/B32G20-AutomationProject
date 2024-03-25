@@ -21,9 +21,6 @@ public class DocumentationStepDef_B32G20_144_Buse {
     @When("user clicks {string} button")
     public void user_clicks_button(String string) {
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(Driver.getDriver().findElement(By.xpath("//div[text()='Congratulations, your inbox is empty']"))));
-        documentationPage.clickAccountName();
         documentationPage.clickingDocumentationButton(string);
 
     }

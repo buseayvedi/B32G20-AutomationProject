@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -57,6 +58,8 @@ public class SalesPageStepDef_B32G20_141_Buse {
 
     @Then("user should see the result on the list : {string},{string},{string},{string},{string},{string}")
     public void user_should_see_the_result_on_the_list(String eQuotationNumber, String eQuotationDate, String eCustomer, String eSalesperson, String eTotal, String eStatus) {
+
+
         List<String> expectedInfo = new ArrayList<>(Arrays.asList(eQuotationNumber,eQuotationDate,eCustomer,eSalesperson,eTotal,eStatus));
         List<String> actualInfo = new ArrayList<>();
 

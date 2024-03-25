@@ -33,7 +33,7 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     }
     @Then("user types {string} on the product name bar")
     public void userTypesOnTheProductNameBar(String string) {
-        inventoryPage.nameBar.clear();
+        BrowserUtilities.hover(inventoryPage.nameBar);
         inventoryPage.nameBar.sendKeys(string);
     }
     @And("user clicks Save button")
@@ -46,7 +46,8 @@ public class AddProduct_B32G20_140_Sevgi_StepDef {
     }
     @When("user types {string} on the search box")
     public void userTypesOnTheSearchBox(String string) {
-        inventoryPage.searchBox.sendKeys(string + Keys.ENTER);
+        BrowserUtilities.hover(inventoryPage.searchBox);
+        inventoryPage.searchBox.sendKeys(string);
     }
     @Then("user click on the product {string}")
     public void user_click_on_the_product(String string) {

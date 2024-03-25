@@ -1,19 +1,14 @@
 package com.twiliaerp.step_definitions;
 
-import com.twiliaerp.page.InventoryPage_B32G20_140;
+import com.twiliaerp.page.InventoryPage_B32G20_140_Sevgi;
 import com.twiliaerp.utilities.BrowserUtilities;
-import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class AddProduct_B32G20_140_Sevgi_StepDef {
 
-    InventoryPage_B32G20_140 inventoryPage = new InventoryPage_B32G20_140();
+    InventoryPage_B32G20_140_Sevgi inventoryPage = new InventoryPage_B32G20_140_Sevgi();
 
 
 

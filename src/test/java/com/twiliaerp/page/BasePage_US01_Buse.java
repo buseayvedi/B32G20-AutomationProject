@@ -86,15 +86,12 @@ public abstract class BasePage_US01_Buse {
 
     }
 
-    public void clickSalesModule(){
-        salesBtn.click();
-        wait.until(ExpectedConditions.invisibilityOf(loadingInfo));
 
-    }
 
 
     public void clickAccountName(){
         accountName.click();
+        wait.until(ExpectedConditions.invisibilityOf(loadingInfo));
     }
 
 

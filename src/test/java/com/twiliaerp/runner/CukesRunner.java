@@ -29,7 +29,7 @@ import org.junit.runner.RunWith;
 
 
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "",
+        tags = "@B32G20-173",
         // Whether to execute a dry run of the feature files
         dryRun = false,
 

@@ -1,5 +1,6 @@
 package com.twiliaerp.page;
 
+import com.twiliaerp.utilities.BrowserUtilities;
 import com.twiliaerp.utilities.ConfigurationReader;
 import com.twiliaerp.utilities.Driver;
 import com.twiliaerp.utilities.ExcelUtil;
@@ -30,7 +31,7 @@ public abstract class BasePage_US01_Buse {
     @FindBy(css = "ul#menu_more>li")
     public List<WebElement> moreHeaderPages;
 
-    @FindBy(css = "li.o_user_menu")
+    @FindBy(css = "li.o_user_menu>a>span")
     public WebElement accountName;
 
     @FindBy(css = "i.fa.fa-comments")
@@ -82,7 +83,7 @@ public abstract class BasePage_US01_Buse {
         Driver.getDriver().findElement(By.id("password")).sendKeys(excelUtil.getCellData(rowNum,2));
         Driver.getDriver().findElement(By.cssSelector("button[type='submit']")).click();
 
-        wait.until(ExpectedConditions.visibilityOf(salesBtn));
+        wait.until(ExpectedConditions.visibilityOf(accountName));
 
     }
 
@@ -93,6 +94,8 @@ public abstract class BasePage_US01_Buse {
         accountName.click();
         wait.until(ExpectedConditions.invisibilityOf(loadingInfo));
     }
+
+
 
 
 

@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>22 Mar 2024, 22:17</td>
+      <td>27 Mar 2024, 17:23</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">main modules functionalities.</td>
-          <td      class="passed"    >2</td>
           <td >0</td>
-          <td >0</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">2</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1995200">0.001</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="3018096400">3.018</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">main modules functionalities.</span>
 
@@ -193,14 +193,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">3.018</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify the POS managers access to 22 modules.</span>
+  <span class="name">Menu Options for posmanager</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -209,16 +209,48 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.twiliaerp.step_definitions.Hooks.setupMethod()</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,15 +260,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
-  <span class="name">user logged in to the Twiliaerp application.</span>
+  <span class="name">user logged in to the Twiliaerp application with posmanager credentials</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">3.018</span>
 
 </div>
 
@@ -244,6 +276,39 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>org.openqa.selenium.InvalidArgumentException:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=123.0.6312.86)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ba83d614c9111bcb5d48e44da1fcdb2, get {url=env}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53007}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53007/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ba83d614c9111bcb5d48e44da1fcdb2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at com.twiliaerp.step_definitions.Main_modules_step_def.user_logged_in_to_the_twiliaerp_application_with_posmanager_credentials(Main_modules_step_def.java:30)
+	at &#10045;.user logged in to the Twiliaerp application with posmanager credentials(file:///C:/Users/pc/IdeaProjects/B32G20-AutomationProject/src/test/resources/features/mainModules.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,9 +324,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">user should land on Discuss page and has access to <span class="argument">22</span> main modules.</span>
+  <span class="name">user should land on Discuss page and has access to the following modules.</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -273,6 +338,74 @@ $(document).ready(function() {
 
 
 
+          <table class="step-arguments">
+              <tr>
+                  <td>Discuss</td>
+              </tr>
+              <tr>
+                  <td>Calendar</td>
+              </tr>
+              <tr>
+                  <td>Notes</td>
+              </tr>
+              <tr>
+                  <td>Contacts</td>
+              </tr>
+              <tr>
+                  <td>CRM</td>
+              </tr>
+              <tr>
+                  <td>Sales</td>
+              </tr>
+              <tr>
+                  <td>Website</td>
+              </tr>
+              <tr>
+                  <td>Point of Sale</td>
+              </tr>
+              <tr>
+                  <td>Purchases</td>
+              </tr>
+              <tr>
+                  <td>Inventory</td>
+              </tr>
+              <tr>
+                  <td>Manufacturing</td>
+              </tr>
+              <tr>
+                  <td>Repairs</td>
+              </tr>
+              <tr>
+                  <td>Project</td>
+              </tr>
+              <tr>
+                  <td>Events</td>
+              </tr>
+              <tr>
+                  <td>Surveys</td>
+              </tr>
+              <tr>
+                  <td>Employees</td>
+              </tr>
+              <tr>
+                  <td>Attendances</td>
+              </tr>
+              <tr>
+                  <td>Leaves</td>
+              </tr>
+              <tr>
+                  <td>Expenses</td>
+              </tr>
+              <tr>
+                  <td>Maintenance</td>
+              </tr>
+              <tr>
+                  <td>Fleet</td>
+              </tr>
+              <tr>
+                  <td>Dashboards</td>
+              </tr>
+          </table>
 
 
 
@@ -289,6 +422,38 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-5" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.twiliaerp.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.858</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
 
   </div>
 </div>

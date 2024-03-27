@@ -1,3 +1,4 @@
+@createEvent
 Feature: creation of an event on the calendar
   Agile Story : As a POS Manager, I should be able to create events on my calendar from Calendar module.
 

@@ -17,7 +17,7 @@ public class DiscussPage {
 
     public WebElement calendar_Btn;
 
-@FindBy(xpath = "(//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder'])/li")
+@FindBy(xpath = "//li[@style='display: block;']")
 public List<WebElement> mainModules;
 
 

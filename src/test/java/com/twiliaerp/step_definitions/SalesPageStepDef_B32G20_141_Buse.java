@@ -26,7 +26,7 @@ public class SalesPageStepDef_B32G20_141_Buse {
     @Given("user login successfully with valid credentials {string}, {int}")
     public void user_login_successfully_with_valid_credentials(String sheetName, int rowNum) {
         salesPage.loginWithExcelFileCredentials(sheetName,rowNum);
-        wait.until(ExpectedConditions.visibilityOf(salesPage.salesBtn));
+        wait.until(ExpectedConditions.visibilityOf(salesPage.accountName));
 
     }
 

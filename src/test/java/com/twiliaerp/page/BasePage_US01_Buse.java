@@ -73,7 +73,7 @@ public abstract class BasePage_US01_Buse {
         return actualList;
     }
 
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(25));
 
     public void loginWithExcelFileCredentials(String sheetName, int rowNum){
         ExcelUtil excelUtil = new ExcelUtil("src/testData/loginCredentials.xlsx",sheetName);

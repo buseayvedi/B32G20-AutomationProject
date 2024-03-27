@@ -28,7 +28,7 @@ public class DocumentationPage_Buse extends BasePage_US01_Buse{
     public void clickingDocumentationButton(String str){
 
         WebElement element = Driver.getDriver().findElement(By.xpath("//a[text()='" +str+ "']"));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+//        wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
 
     }

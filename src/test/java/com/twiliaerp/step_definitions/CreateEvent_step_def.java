@@ -6,6 +6,8 @@ import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -28,27 +30,34 @@ public class CreateEvent_step_def  {
 
     discussPage.calendar_Btn.click();
 
+
         calendarPage.timeBox.click();
-        calendarPage.event_input_page.isDisplayed();
+
+        wait.until(ExpectedConditions.visibilityOf(event_input_page.eventInputPage));
+
     }
     @Then("user can create an event.")
     public void user_can_create_an_event() {
 
-        event_input_page.event_input.click();
-        event_input_page.event_input.sendKeys("lunch");
-        event_input_page.create_Btn.click();
+        calendarPage.event_input.click();
+        calendarPage.event_input.sendKeys("lunch");
+        calendarPage.create_Btn.click();
     }
 
 
     @When("user goes to calendar and clicks on created event.")
     public void user_goes_to_calendar_and_clicks_on_any_created_event() {
         discussPage.calendar_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(calendarPage.created_event));
         calendarPage.created_event.click();
     }
     @Then("user can see details of created event.")
     public void user_can_see_details_of_created_event() {
 
         calendarPage.event_details.isDisplayed();
+
+        calendarPage.delete_Btn.click();
+        calendarPage.ok_Btn.click();
     }
 
 

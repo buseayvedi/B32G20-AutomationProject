@@ -15,6 +15,8 @@ public class EventInputPage {
 
     @FindBy(css="button[class='btn btn-sm btn-primary']")
     public WebElement create_Btn;
+    @FindBy(xpath = "//div[@class='modal-content']")
+    public WebElement eventInputPage;
 
 
 

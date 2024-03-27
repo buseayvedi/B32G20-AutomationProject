@@ -10,10 +10,10 @@ public class CalendarPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath="(//td[@class='fc-widget-content'])[5]")
+    @FindBy(xpath="(//td[@class='fc-widget-content'])[4]")
     public WebElement timeBox;
 
-    @FindBy(xpath="input[@name='name']")
+    @FindBy(xpath="//input[@class='o_input']")
     public WebElement event_input;
 
     @FindBy(css="button[class='btn btn-sm btn-primary']")
@@ -22,10 +22,13 @@ public class CalendarPage {
     public WebElement created_event;
     @FindBy(css="div[class='o_group']")
     public WebElement event_details;
-    @FindBy(xpath = "//div[@id='modal_11']/div/div")
-    public WebElement event_input_page;
 
 
+
+@FindBy(xpath = "(//div/button[@class='btn btn-sm btn-default']/span)[1]")
+    public WebElement delete_Btn;
+@FindBy(xpath = "(//div/button[@class='btn btn-sm btn-primary']/span)[2]")
+    public WebElement ok_Btn;
 
 
 

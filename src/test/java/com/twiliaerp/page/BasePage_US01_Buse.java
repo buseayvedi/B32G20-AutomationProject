@@ -83,7 +83,7 @@ public abstract class BasePage_US01_Buse {
         Driver.getDriver().findElement(By.id("password")).sendKeys(excelUtil.getCellData(rowNum,2));
         Driver.getDriver().findElement(By.cssSelector("button[type='submit']")).click();
 
-        wait.until(ExpectedConditions.visibilityOf(salesBtn));
+        wait.until(ExpectedConditions.visibilityOf(accountName));
 
     }
 

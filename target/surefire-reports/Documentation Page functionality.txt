@@ -1,0 +1,176 @@
+-------------------------------------------------------------------------------
+Test set: Documentation Page functionality
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 355.462 s <<< FAILURE! - in Documentation Page functionality
+Documentation Page functionality.AC1: Verify the “Odoo Documentation” message is displayed in a new window after clicking Documentation button in the profile menu. #1  Time elapsed: 34.781 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user clicks "Documentation" button' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user clicks {string} button")
+public void user_clicks_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user should see “Odoo Documentation” message in a new window")
+public void user_should_see_odoo_documentation_message_in_a_new_window() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Documentation Page functionality.AC1: Verify the “Odoo Documentation” message is displayed in a new window after clicking Documentation button in the profile menu. #2  Time elapsed: 29.945 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user clicks "Documentation" button' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user clicks {string} button")
+public void user_clicks_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user should see “Odoo Documentation” message in a new window")
+public void user_should_see_odoo_documentation_message_in_a_new_window() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Documentation Page functionality.AC1: Verify the “Odoo Documentation” message is displayed in a new window after clicking Documentation button in the profile menu. #3  Time elapsed: 22.07 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user clicks "Documentation" button' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user clicks {string} button")
+public void user_clicks_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user should see “Odoo Documentation” message in a new window")
+public void user_should_see_odoo_documentation_message_in_a_new_window() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Documentation Page functionality.AC1: Verify the “Odoo Documentation” message is displayed in a new window after clicking Documentation button in the profile menu. #4  Time elapsed: 63.099 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: a[href='/web#menu_id=445&action=']' (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/web#menu_id=445&action=']"}
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd5ab9d89db08312f33394a774e6922a, findElement {using=css selector, value=a[href='/web#menu_id=445&action=']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/s1/2g71bq194ql...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51935}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51935/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bd5ab9d89db08312f33394a774e6922a
+
+Documentation Page functionality.AC1: Verify the “Odoo Documentation” message is displayed in a new window after clicking Documentation button in the profile menu. #5  Time elapsed: 59.285 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: a[href='/web#menu_id=445&action=']' (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/web#menu_id=445&action=']"}
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [135132bed0623ad90866c18c4f88204c, findElement {using=css selector, value=a[href='/web#menu_id=445&action=']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/s1/2g71bq194ql...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52102}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52102/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 135132bed0623ad90866c18c4f88204c
+
+Documentation Page functionality.AC2: Verify that 4 main document topics (User Docs, Install and Maintain, Developer, Contribute) are listed in Odoo Documentation. #1  Time elapsed: 12.166 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user clicks "Documentation" button' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user clicks {string} button")
+public void user_clicks_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user should see these main document topics:")
+public void user_should_see_these_main_document_topics(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Documentation Page functionality.AC2: Verify that 4 main document topics (User Docs, Install and Maintain, Developer, Contribute) are listed in Odoo Documentation. #2  Time elapsed: 11.512 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user clicks "Documentation" button' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user clicks {string} button")
+public void user_clicks_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user should see these main document topics:")
+public void user_should_see_these_main_document_topics(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Documentation Page functionality.AC2: Verify that 4 main document topics (User Docs, Install and Maintain, Developer, Contribute) are listed in Odoo Documentation. #3  Time elapsed: 11.354 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user clicks "Documentation" button' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user clicks {string} button")
+public void user_clicks_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user should see these main document topics:")
+public void user_should_see_these_main_document_topics(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Documentation Page functionality.AC2: Verify that 4 main document topics (User Docs, Install and Maintain, Developer, Contribute) are listed in Odoo Documentation. #4  Time elapsed: 55.514 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: a[href='/web#menu_id=445&action=']' (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/web#menu_id=445&action=']"}
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ffcb81de195da9f26a49378f11c2fcf, findElement {using=css selector, value=a[href='/web#menu_id=445&action=']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/s1/2g71bq194ql...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52214}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52214/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ffcb81de195da9f26a49378f11c2fcf
+
+Documentation Page functionality.AC2: Verify that 4 main document topics (User Docs, Install and Maintain, Developer, Contribute) are listed in Odoo Documentation. #5  Time elapsed: 55.731 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: a[href='/web#menu_id=445&action=']' (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/web#menu_id=445&action=']"}
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [338ddaf1c6d8abb51d658d0aad3ad0f1, findElement {using=css selector, value=a[href='/web#menu_id=445&action=']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/s1/2g71bq194ql...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52234}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52234/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 338ddaf1c6d8abb51d658d0aad3ad0f1
+

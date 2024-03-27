@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "@target/rerun.txt",
         
         // Specifies the package where step definitions are located
-        glue = "com/cydeo/step_definitions"
+        glue = "com/twiliaerp/step_definitions"
 )
 
 public class FailedTestRunner {

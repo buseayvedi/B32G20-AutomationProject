@@ -1,4 +1,4 @@
-@B32G20-165 @wip
+@B32G20-165
 Feature: Default
 
 	#*{color:#DE350B}*US08 *{color}*

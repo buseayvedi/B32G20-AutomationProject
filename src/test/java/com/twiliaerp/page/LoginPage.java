@@ -1,14 +1,13 @@
 package com.twiliaerp.page;
 
-import com.twiliaerp.utilities.ConfigurationReader;
 import com.twiliaerp.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasePage_US04_manal {
+public class LoginPage {
 
-    public BasePage_US04_manal(){
+    public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -22,14 +21,13 @@ public class BasePage_US04_manal {
     public WebElement login_Btn;
 
 
-
-
-    public void login(String username, String password){
+    public void login(String username, String password) {
         username_input.sendKeys(username);
         password_input.sendKeys(password);
         login_Btn.click();
 
 
     }
+
 
 }

@@ -22,15 +22,16 @@ public class CreateEvent_step_def  {
 
     @Given("user is already logged in to the Twiliaerp application and landed on the discuss page.")
     public void user_is_already_logged_in_to_the_twiliaerp_application_and_landed_on_the_discuss_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("twiliaerp_URL"));
-        loginPage.login(ConfigurationReader.getProperty("pos_manager_username"),ConfigurationReader.getProperty("pos_manager_password"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        loginPage.login(ConfigurationReader.getProperty("POS_username"),ConfigurationReader.getProperty("POS_password"));
     }
     @When("user go to calendar and clicks on any time box.")
-    public void user_go_to_calendar_and_clicks_on_any_time_box() {
-
+    public void user_go_to_calendar_and_clicks_on_any_time_box() throws InterruptedException {
+        //wait.until(ExpectedConditions.titleIs("#Inbox - Odoo"));
+        Thread.sleep(3000);
     discussPage.calendar_Btn.click();
 
-
+Thread.sleep(3000);
         calendarPage.timeBox.click();
 
         wait.until(ExpectedConditions.visibilityOf(event_input_page.eventInputPage));
@@ -46,14 +47,15 @@ public class CreateEvent_step_def  {
 
 
     @When("user goes to calendar and clicks on created event.")
-    public void user_goes_to_calendar_and_clicks_on_any_created_event() {
-        discussPage.calendar_Btn.click();
+    public void user_goes_to_calendar_and_clicks_on_any_created_event() throws InterruptedException {
+       Thread.sleep(3000);
+       discussPage.calendar_Btn.click();
         wait.until(ExpectedConditions.visibilityOf(calendarPage.created_event));
         calendarPage.created_event.click();
     }
     @Then("user can see details of created event.")
-    public void user_can_see_details_of_created_event() {
-
+    public void user_can_see_details_of_created_event() throws InterruptedException {
+Thread.sleep(3000);
         calendarPage.event_details.isDisplayed();
 
         calendarPage.delete_Btn.click();

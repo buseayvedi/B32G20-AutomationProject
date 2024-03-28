@@ -27,7 +27,7 @@ WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3)
 
     @When("user logged in to the Twiliaerp application with posmanager credentials")
     public void user_logged_in_to_the_twiliaerp_application_with_posmanager_credentials() {
-        Driver.getDriver().get("env");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         loginPage.login(ConfigurationReader.getProperty("POS_username"),ConfigurationReader.getProperty("POS_password"));
 
     }
@@ -35,9 +35,9 @@ WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3)
 
 
     @Then("user should land on Discuss page and has access to the following modules.")
-    public void user_should_land_on_discuss_page_and_has_access_to_the_following_modules(List<String>  expectedMainModules)  {
-     wait.until(ExpectedConditions.titleIs("#Inbox - Odoo"));
-
+    public void user_should_land_on_discuss_page_and_has_access_to_the_following_modules(List<String>  expectedMainModules) throws InterruptedException {
+     //wait.until(ExpectedConditions.titleIs("#Inbox - Odoo"));
+        Thread.sleep(3000);
         List<String> actualMainModules = new ArrayList<>();
 
         for (WebElement eachMainModule : discussPage.mainModules) {

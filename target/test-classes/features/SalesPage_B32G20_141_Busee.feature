@@ -21,7 +21,7 @@ Feature: Default
       | salesmanager | 65     |
 
 
-  @B32G20-158
+  @B32G20-158 @buse3
   Scenario Outline: AC2: Verify user can see the result on the list when searching with Quotation Number data.
     Given user login successfully with valid credentials "<sheetName>", <rowNum>
     When user clicks Sales title and land on the page successfully

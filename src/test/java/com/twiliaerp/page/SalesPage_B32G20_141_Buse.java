@@ -1,6 +1,9 @@
 package com.twiliaerp.page;
 
 import com.twiliaerp.utilities.Driver;
+import org.junit.experimental.theories.Theories;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,7 +29,7 @@ public class SalesPage_B32G20_141_Buse extends BasePage_US01_Buse {
     @FindBy(css = "th.o_column_sortable")
     public List<WebElement> listTitles_QuotationsPage;
 
-    @FindBy(css = "td[class*='o_data_cell']")
+    @FindBy(css = "td.o_data_cell")
     public List<WebElement> searchResultElements;
 
     public void clickSearchBox(){
@@ -36,6 +39,12 @@ public class SalesPage_B32G20_141_Buse extends BasePage_US01_Buse {
     public void clickSalesModule(){
         salesBtn.click();
         wait.until(ExpectedConditions.visibilityOf(quotationNumberTitle));
+
+    }
+
+    public void searchProductInSearchBox(String str){
+
+        searchBox.sendKeys(str + Keys.ENTER);
 
     }
 
